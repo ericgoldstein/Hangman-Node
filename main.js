@@ -1,6 +1,6 @@
 var Word = require('./word.js');
 var prompt = require('prompt');
-// var letter = require('./letter.js');
+var letter = require('./letter.js');
 
 console.log("Welcome to State Hangman!");
 console.log("Guess a letter of the name of a State in USA");
@@ -17,8 +17,21 @@ game = {
  	currentWrd: null,
  	
  	startGame: function (wrd) {
+ 		const that = this;
  		this.resetGuesses();
  		this.currentWrd = new Word(this.wordBank[Math.floor(Math.random()* this.wordBank.length)]);
+ 		// console.log('here is my this',this);
+
+ 		const getBlanks = () => {
+ 			const blanks =[];
+ 			// console.log('here is the word length', that.currentWrd.target.length);
+ 			for(let i = 0; i < that.currentWrd.target.length; i++) {
+ 				blanks.push('_');
+ 			}
+ 			console.log(blanks.join(' '));
+ 			return blanks;
+ 		};
+ 		getBlanks();
  		this.currentWrd.getLet();
  		this.promptUser();
  	},
@@ -64,3 +77,4 @@ game = {
 };
 
 game.startGame();
+

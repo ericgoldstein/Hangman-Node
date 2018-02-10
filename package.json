@@ -1,0 +1,22 @@
+{
+  "name": "week11-hangman",
+  "version": "1.0.0",
+  "description": "A Node.js Hangman Game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericgoldstein/Hangman-Node"
+  },
+  "author": "Eric Goldstein",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/ericgoldstein/Hangman-Node/blob/master/README.md",
+  "dependencies": {
+    "inquirer": "^1.2.2"
+  }
+}
